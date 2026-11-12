@@ -30,8 +30,9 @@ fenrir ships as a **Claude Code plugin** that wires the MCP connector for you.
 Three pieces, in order:
 
 ```bash
-# 1) The HOST (engine): install the signed RPM → /usr/bin/fenrir-host
-sudo dnf install fenrir-host-*.rpm          # or zypper / rpm -i
+# 1) The HOST (engine), one line, no root:
+curl -fsSL https://raw.githubusercontent.com/isazajuancarlos/fenrir/master/install.sh | sh
+#    (Fedora/openSUSE: the signed RPM also works. Windows: coming soon.)
 
 # 2) The CONNECTOR in Claude Code:
 claude plugin marketplace add isazajuancarlos/fenrir
@@ -100,8 +101,9 @@ fenrir se empaqueta como **plugin de Claude Code** que registra el conector MCP
 por ti. Tres piezas, en orden:
 
 ```bash
-# 1) El HOST (motor): instala el RPM firmado → /usr/bin/fenrir-host
-sudo dnf install fenrir-host-*.rpm          # o zypper / rpm -i
+# 1) El HOST (motor), una línea, sin root:
+curl -fsSL https://raw.githubusercontent.com/isazajuancarlos/fenrir/master/install.sh | sh
+#    (Fedora/openSUSE: el RPM firmado también sirve. Windows: próximamente.)
 
 # 2) El CONECTOR en Claude Code:
 claude plugin marketplace add isazajuancarlos/fenrir
