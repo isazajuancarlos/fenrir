@@ -31,8 +31,9 @@ Three pieces, in order:
 
 ```bash
 # 1) The HOST (engine), one line, no root:
-curl -fsSL https://raw.githubusercontent.com/isazajuancarlos/fenrir/master/install.sh | sh
-#    (Fedora/openSUSE: the signed RPM also works. Windows: coming soon.)
+curl -fsSL https://raw.githubusercontent.com/isazajuancarlos/fenrir/master/install.sh | sh   # Linux/macOS
+#    Windows (PowerShell):  irm https://raw.githubusercontent.com/isazajuancarlos/fenrir/master/install.ps1 | iex
+#    (Fedora/openSUSE: the signed RPM also works.)
 
 # 2) The CONNECTOR in Claude Code:
 claude plugin marketplace add isazajuancarlos/fenrir
@@ -102,8 +103,9 @@ por ti. Tres piezas, en orden:
 
 ```bash
 # 1) El HOST (motor), una línea, sin root:
-curl -fsSL https://raw.githubusercontent.com/isazajuancarlos/fenrir/master/install.sh | sh
-#    (Fedora/openSUSE: el RPM firmado también sirve. Windows: próximamente.)
+curl -fsSL https://raw.githubusercontent.com/isazajuancarlos/fenrir/master/install.sh | sh   # Linux/macOS
+#    Windows (PowerShell):  irm https://raw.githubusercontent.com/isazajuancarlos/fenrir/master/install.ps1 | iex
+#    (Fedora/openSUSE: el RPM firmado también sirve.)
 
 # 2) El CONECTOR en Claude Code:
 claude plugin marketplace add isazajuancarlos/fenrir
