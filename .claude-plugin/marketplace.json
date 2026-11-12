@@ -1,0 +1,12 @@
+{
+  "name": "fenrir",
+  "description": "Fenrir — a DOM-first Firefox automation agent, drivable as a local MCP server from any client.",
+  "owner": { "name": "Juan Carlos Isaza" },
+  "plugins": [
+    {
+      "name": "fenrir",
+      "source": "./",
+      "description": "Drive Firefox (isolated profile) from any MCP client — DOM-first, local, with human confirmation gates on sensitive actions. Requires the fenrir-host native binary (RPM)."
+    }
+  ]
+}

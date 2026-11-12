@@ -24,6 +24,29 @@ so **any MCP client** — Claude Code, Claude Desktop, Cursor — can drive Fire
 through the same bridge. Seven tools: `percibir` (perceive), `navegar`, `click`,
 `escribir`, `desplazar`, `tecla`, `fetch`.
 
+### Install from Claude (the easy way)
+
+fenrir ships as a **Claude Code plugin** that wires the MCP connector for you.
+Three pieces, in order:
+
+```bash
+# 1) The HOST (engine): install the signed RPM → /usr/bin/fenrir-host
+sudo dnf install fenrir-host-*.rpm          # or zypper / rpm -i
+
+# 2) The CONNECTOR in Claude Code:
+claude plugin marketplace add isazajuancarlos/fenrir
+claude plugin install fenrir@fenrir
+#    → 'plugin:fenrir:fenrir ✔ Connected' in `claude mcp list`
+
+# 3) The Firefox EXTENSION: download the signed .xpi from the latest Release and install it:
+#    https://github.com/isazajuancarlos/fenrir/releases/latest
+```
+
+With the plugin installed, if the extension isn't connected yet, Claude tells you
+where to download it (a `SessionStart` hook); once the bridge is up, it stays
+quiet. fenrir drives Firefox only when all three are in place: host + plugin +
+extension.
+
 ## Security posture (it's the design)
 
 An LLM driving a browser with your real sessions is the nightmare. fenrir is built
@@ -70,6 +93,29 @@ a una **pestaña dedicada** para no tocar nunca la que estás mirando.
 stdio), para que **cualquier cliente MCP** —Claude Code, Claude Desktop, Cursor—
 conduzca Firefox por el mismo puente. Siete herramientas: `percibir`, `navegar`,
 `click`, `escribir`, `desplazar`, `tecla`, `fetch`.
+
+### Instalar desde Claude (la vía fácil)
+
+fenrir se empaqueta como **plugin de Claude Code** que registra el conector MCP
+por ti. Tres piezas, en orden:
+
+```bash
+# 1) El HOST (motor): instala el RPM firmado → /usr/bin/fenrir-host
+sudo dnf install fenrir-host-*.rpm          # o zypper / rpm -i
+
+# 2) El CONECTOR en Claude Code:
+claude plugin marketplace add isazajuancarlos/fenrir
+claude plugin install fenrir@fenrir
+#    → 'plugin:fenrir:fenrir ✔ Connected' en `claude mcp list`
+
+# 3) La EXTENSIÓN de Firefox: descarga el .xpi firmado del último Release e instálalo:
+#    https://github.com/isazajuancarlos/fenrir/releases/latest
+```
+
+Con el plugin instalado, si la extensión aún no está conectada, Claude te dice
+dónde descargarla (un hook `SessionStart`); cuando el puente está arriba, calla.
+fenrir conduce Firefox solo cuando están las tres piezas: host + plugin +
+extensión.
 
 ### Postura de seguridad (es el diseño)
 

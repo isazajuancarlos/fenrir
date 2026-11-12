@@ -1,0 +1,18 @@
+{
+  "name": "fenrir",
+  "version": "0.1.0",
+  "description": "Drive Firefox from any MCP client: perceive the DOM, navigate, click, type, scroll, and replay same-origin requests on a dedicated, isolated Firefox tab, with human confirmation gates on sensitive actions. Local-first, no API key. Requires the fenrir-host native binary.",
+  "author": { "name": "Juan Carlos Isaza" },
+  "homepage": "https://github.com/isazajuancarlos/fenrir",
+  "repository": "https://github.com/isazajuancarlos/fenrir",
+  "license": "AGPL-3.0-or-later",
+  "keywords": [
+    "firefox",
+    "browser-automation",
+    "mcp",
+    "agent",
+    "dom",
+    "local-first",
+    "web-automation"
+  ]
+}

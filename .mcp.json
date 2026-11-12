@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fenrir": {
+      "command": "/usr/bin/fenrir-host",
+      "args": ["mcp"]
+    }
+  }
+}
